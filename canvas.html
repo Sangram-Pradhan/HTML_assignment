@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas exmple</title>
+    <style>
+        canvas {
+            border: 1px solid rgb(31, 1, 1);
+        }
+    </style>
+    <script>window.onload = function () {
+            var cn = document.getElementById("firstcn");
+            var ctx = cn.getContext("2d");
+            
+            //  ctx.lineWidth =10;
+            //ctx.strokeStyle = "green";
+            //ctx.lineCap = "round";
+            //ctx.arc(120, 100, 60, 0, 2 * Math.PI, false);
+            ctx.arc(75, 75, 50, 0, Math.PI * 2, true); 
+            
+            ctx.moveTo(105, 75);         
+            ctx.arc(75, 75, 30, 0, Math.PI, false);
+            ctx.moveTo(55, 50);
+            ctx.arc(50, 50, 4, 0, Math.PI * 2, true);
+            ctx.moveTo(103, 49);
+            ctx.arc(100, 50, 4, 0, Math.PI * 2, true);
+            //ctx.moveTo(60,130);
+            //ctx.lineTo(200,40);
+            ctx.stroke();
+        };
+    </script>
+</head>
+
+<body>
+    <Canvas id="firstcn" width="400" height="300"></Canvas>
+</body>
+
+</html>
